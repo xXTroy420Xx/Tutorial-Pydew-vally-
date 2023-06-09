@@ -1,0 +1,13 @@
+import pygame
+from settings import *
+
+class Overlay:
+    def __init__(self,player):
+        
+        #general setup
+        self.display_surface = pygame.display.get_surface()
+        self.player = player
+        
+        #import
+        self.tools_surf = {tool:surface for tool in player.tools}
+        self.seeds_surf = {}
